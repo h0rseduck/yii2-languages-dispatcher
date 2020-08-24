@@ -1,5 +1,5 @@
 {
-  "name": "cetver/yii2-languages-dispatcher",
+  "name": "h0rseduck/yii2-languages-dispatcher",
   "description": "Sets the web-application language for the Yii framework 2.0",
   "type": "yii2-extension",
   "keywords": [
@@ -18,8 +18,8 @@
   ],
   "license": "BSD-3-Clause",
   "support": {
-    "source": "https://github.com/cetver/yii2-languages-dispatcher",
-    "issues": "https://github.com/cetver/yii2-languages-dispatcher/issues"
+    "source": "https://github.com/h0rseduck/yii2-languages-dispatcher",
+    "issues": "https://github.com/h0rseduck/yii2-languages-dispatcher/issues"
   },
   "authors": [
     {
@@ -39,7 +39,7 @@
   },
   "autoload": {
     "psr-4": {
-      "cetver\\LanguagesDispatcher\\": ""
+      "h0rseduck\\LanguagesDispatcher\\": ""
     }
   },
   "config": {

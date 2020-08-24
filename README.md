@@ -15,13 +15,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-composer require --prefer-dist cetver/yii2-languages-dispatcher
+composer require --prefer-dist h0rseduck/yii2-languages-dispatcher
 ```
 
 or add
 
 ```
-"cetver/yii2-languages-dispatcher": "^1.0"
+"h0rseduck/yii2-languages-dispatcher": "^1.0"
 ```
 
 to the require section of your `composer.json` file.
@@ -37,7 +37,7 @@ return [
     'bootstrap' => ['languagesDispatcher'],
     'components' => [
         'languagesDispatcher' => [
-            'class' => 'cetver\LanguagesDispatcher\Component',
+            'class' => 'h0rseduck\LanguagesDispatcher\Component',
             'languages' => ['en', 'ru'],
             // useful if you want to push the language handler at the beginning of beforeAction event handlers list
             'appendSetLanguageHandler' => false, // defaults to true
@@ -51,7 +51,7 @@ return [
             'handlers' => [
                 [
                     // Detects a language based on host name
-                    'class' => 'cetver\LanguagesDispatcher\handlers\HostNameHandler',
+                    'class' => 'h0rseduck\LanguagesDispatcher\handlers\HostNameHandler',
                     'request' => 'request', // optional, the Request component ID.                    
                     'hostMap' => [ // An array that maps hostnames to languages or a callable function that returns it.
                         'en.example.com' => 'en',
@@ -60,21 +60,21 @@ return [
                 ],
                 [
                     // Detects a language from the query parameter.
-                    'class' => 'cetver\LanguagesDispatcher\handlers\QueryParamHandler',
+                    'class' => 'h0rseduck\LanguagesDispatcher\handlers\QueryParamHandler',
                     'request' => 'request', // optional, the Request component ID.
                     'queryParam' => 'language' // optional, the query parameter name that contains a language.
                 ],
                 [
                     // Detects a language from the session.
                     // Writes a language to the session, regardless of what handler detected it.
-                    'class' => 'cetver\LanguagesDispatcher\handlers\SessionHandler',
+                    'class' => 'h0rseduck\LanguagesDispatcher\handlers\SessionHandler',
                     'session' => 'session', // optional, the Session component ID.
                     'key' => 'language' // optional, the session key that contains a language.
                 ],
                 [
                     // Detects a language from the cookie.
                     // Writes a language to the cookie, regardless of what handler detected it.
-                    'class' => 'cetver\LanguagesDispatcher\handlers\CookieHandler',
+                    'class' => 'h0rseduck\LanguagesDispatcher\handlers\CookieHandler',
                     'request' => 'request', // optional, the Request component ID.
                     'response' => 'response', // optional, the Response component ID.
                     'cookieConfig' => [ // optional, the Cookie component configuration.
@@ -91,18 +91,18 @@ return [
                     // Detects a language from an authenticated user.
                     // Writes a language to an authenticated user, regardless of what handler detected it.
                     // Note: The property "identityClass" of the "User" component must be an instance of "\yii\db\ActiveRecord"
-                    'class' => 'cetver\LanguagesDispatcher\handlers\UserHandler',
+                    'class' => 'h0rseduck\LanguagesDispatcher\handlers\UserHandler',
                     'user' => 'user',  // optional, the User component ID.
                     'languageAttribute' => 'language_code' // optional, an attribute that contains a language.
                 ],
                 [
                     // Detects a language from the "Accept-Language" header.
-                    'class' => 'cetver\LanguagesDispatcher\handlers\AcceptLanguageHeaderHandler',
+                    'class' => 'h0rseduck\LanguagesDispatcher\handlers\AcceptLanguageHeaderHandler',
                     'request' => 'request', // optional, the Request component ID.
                 ],
                 [
                     // Detects a language from the "language" property.
-                    'class' => 'cetver\LanguagesDispatcher\handlers\DefaultLanguageHandler',
+                    'class' => 'h0rseduck\LanguagesDispatcher\handlers\DefaultLanguageHandler',
                     'language' => 'en' // the default language.
                     /*
                     or
@@ -128,7 +128,7 @@ Tests
 Run the following commands
 
 ```
-composer create-project --prefer-source cetver/yii2-languages-dispatcher
+composer create-project --prefer-source h0rseduck/yii2-languages-dispatcher
 cd yii2-languages-dispatcher
 vendor/bin/codecept run unit
 ```

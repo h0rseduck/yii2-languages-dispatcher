@@ -6,4 +6,4 @@ actor: UnitTester
 modules:
     enabled:
         - Asserts
-        - \cetver\LanguagesDispatcher\tests\Helper\Unit
+        - \h0rseduck\LanguagesDispatcher\tests\Helper\Unit

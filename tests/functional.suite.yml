@@ -9,4 +9,4 @@ actor: FunctionalTester
 modules:
     enabled:
         # add a framework module here
-        - \cetver\LanguagesDispatcher\tests\Helper\Functional
+        - \h0rseduck\LanguagesDispatcher\tests\Helper\Functional

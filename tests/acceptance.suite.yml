@@ -9,4 +9,4 @@ modules:
     enabled:
         - PhpBrowser:
             url: http://localhost/myapp
-        - \cetver\LanguagesDispatcher\tests\Helper\Acceptance
+        - \h0rseduck\LanguagesDispatcher\tests\Helper\Acceptance
