@@ -1,8 +1,8 @@
 <?php
 
-namespace cetver\LanguagesDispatcher;
+namespace h0rseduck\LanguagesDispatcher;
 
-use cetver\LanguagesDispatcher\handlers\AbstractHandler;
+use h0rseduck\LanguagesDispatcher\handlers\AbstractHandler;
 use Yii;
 use yii\base\BootstrapInterface;
 use yii\base\Event;
@@ -12,7 +12,7 @@ use yii\web\Application;
 /**
  * Class Component manages a set of language handlers.
  *
- * @package cetver\LanguagesDispatcher
+ * @package h0rseduck\LanguagesDispatcher
  */
 class Component extends \yii\base\Component implements BootstrapInterface
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace cetver\LanguagesDispatcher\handlers;
+namespace h0rseduck\LanguagesDispatcher\handlers;
 
-use cetver\LanguagesDispatcher\Component;
+use h0rseduck\LanguagesDispatcher\Component;
 use Yii;
 use yii\base\InvalidConfigException;
 use yii\helpers\VarDumper;
@@ -13,7 +13,7 @@ use yii\web\Response;
 /**
  * Class CookieHandler handles the languages by the cookies.
  *
- * @package cetver\LanguagesDispatcher\handlers
+ * @package h0rseduck\LanguagesDispatcher\handlers
  */
 class CookieHandler extends AbstractHandler
 {

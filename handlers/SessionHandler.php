@@ -1,8 +1,8 @@
 <?php
 
-namespace cetver\LanguagesDispatcher\handlers;
+namespace h0rseduck\LanguagesDispatcher\handlers;
 
-use cetver\LanguagesDispatcher\Component;
+use h0rseduck\LanguagesDispatcher\Component;
 use Yii;
 use yii\base\InvalidConfigException;
 use yii\web\MultiFieldSession;
@@ -11,7 +11,7 @@ use yii\web\Session;
 /**
  * Class SessionHandler handles the languages by the session.
  *
- * @package cetver\LanguagesDispatcher\handlers
+ * @package h0rseduck\LanguagesDispatcher\handlers
  */
 class SessionHandler extends AbstractHandler
 {

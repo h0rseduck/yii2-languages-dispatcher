@@ -1,6 +1,6 @@
 <?php
 
-namespace cetver\LanguagesDispatcher\handlers;
+namespace h0rseduck\LanguagesDispatcher\handlers;
 
 use Yii;
 use yii\base\InvalidConfigException;

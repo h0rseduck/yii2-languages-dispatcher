@@ -1,6 +1,6 @@
 <?php
 
-namespace cetver\LanguagesDispatcher\handlers;
+namespace h0rseduck\LanguagesDispatcher\handlers;
 
 use Yii;
 use yii\base\InvalidConfigException;
@@ -9,7 +9,7 @@ use yii\web\Request;
 /**
  * Class AcceptLanguageHeaderHandler handles the languages by Accept-Language header.
  *
- * @package cetver\LanguagesDispatcher\handlers
+ * @package h0rseduck\LanguagesDispatcher\handlers
  */
 class AcceptLanguageHeaderHandler extends AbstractHandler
 {

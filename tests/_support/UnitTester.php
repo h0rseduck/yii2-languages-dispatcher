@@ -1,5 +1,5 @@
 <?php
-namespace cetver\LanguagesDispatcher\tests;
+namespace h0rseduck\LanguagesDispatcher\tests;
 
 /**
  * Inherited Methods

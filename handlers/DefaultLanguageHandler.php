@@ -1,13 +1,13 @@
 <?php
 
-namespace cetver\LanguagesDispatcher\handlers;
+namespace h0rseduck\LanguagesDispatcher\handlers;
 
 use yii\base\InvalidConfigException;
 
 /**
  * Class DefaultLanguageHandler handles the default language.
  *
- * @package cetver\LanguagesDispatcher\handlers
+ * @package h0rseduck\LanguagesDispatcher\handlers
  */
 class DefaultLanguageHandler extends AbstractHandler
 {

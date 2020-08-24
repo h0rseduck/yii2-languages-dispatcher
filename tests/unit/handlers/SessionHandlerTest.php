@@ -1,9 +1,9 @@
 <?php
 
-namespace cetver\LanguagesDispatcher\tests\handlers;
+namespace h0rseduck\LanguagesDispatcher\tests\handlers;
 
-use cetver\LanguagesDispatcher\handlers\SessionHandler;
-use cetver\LanguagesDispatcher\tests\AbstractUnitTest;
+use h0rseduck\LanguagesDispatcher\handlers\SessionHandler;
+use h0rseduck\LanguagesDispatcher\tests\AbstractUnitTest;
 use Yii;
 use yii\base\InvalidConfigException;
 use yii\web\Application;

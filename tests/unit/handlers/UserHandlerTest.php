@@ -1,11 +1,11 @@
 <?php
 
-namespace cetver\LanguagesDispatcher\tests\handlers;
+namespace h0rseduck\LanguagesDispatcher\tests\handlers;
 
-use cetver\LanguagesDispatcher\handlers\UserHandler;
-use cetver\LanguagesDispatcher\tests\_data\models\UserActiveRecord;
-use cetver\LanguagesDispatcher\tests\_data\models\UserObject;
-use cetver\LanguagesDispatcher\tests\AbstractUnitTest;
+use h0rseduck\LanguagesDispatcher\handlers\UserHandler;
+use h0rseduck\LanguagesDispatcher\tests\_data\models\UserActiveRecord;
+use h0rseduck\LanguagesDispatcher\tests\_data\models\UserObject;
+use h0rseduck\LanguagesDispatcher\tests\AbstractUnitTest;
 use Exception;
 use Yii;
 use yii\base\InvalidConfigException;
@@ -42,7 +42,7 @@ class UserHandlerTest extends AbstractUnitTest
                 $this->mockWebApplication([
                     'components' => [
                         'user' => [
-                            'identityClass' => 'cetver\LanguagesDispatcher\tests\_data\models\UserObject',
+                            'identityClass' => 'h0rseduck\LanguagesDispatcher\tests\_data\models\UserObject',
                         ],
                     ],
                 ]);

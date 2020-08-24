@@ -1,8 +1,8 @@
 <?php
 
-namespace cetver\LanguagesDispatcher\handlers;
+namespace h0rseduck\LanguagesDispatcher\handlers;
 
-use cetver\LanguagesDispatcher\Component;
+use h0rseduck\LanguagesDispatcher\Component;
 use Yii;
 use yii\base\InvalidConfigException;
 use yii\db\ActiveRecord;
@@ -11,7 +11,7 @@ use yii\web\User;
 /**
  * Class UserHandler handles the languages by an authenticated user.
  *
- * @package cetver\LanguagesDispatcher\handlers
+ * @package h0rseduck\LanguagesDispatcher\handlers
  */
 class UserHandler extends AbstractHandler
 {

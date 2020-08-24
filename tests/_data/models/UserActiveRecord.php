@@ -1,6 +1,6 @@
 <?php
 
-namespace cetver\LanguagesDispatcher\tests\_data\models;
+namespace h0rseduck\LanguagesDispatcher\tests\_data\models;
 
 use yii\base\NotSupportedException;
 use yii\db\ActiveRecord;

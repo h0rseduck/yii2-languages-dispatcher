@@ -1,6 +1,6 @@
 <?php
 
-namespace cetver\LanguagesDispatcher\tests;
+namespace h0rseduck\LanguagesDispatcher\tests;
 
 use Codeception\Test\Unit;
 use yii\helpers\ArrayHelper;
@@ -9,7 +9,7 @@ use yii\web\Application;
 abstract class AbstractUnitTest extends Unit
 {
     /**
-     * @var \cetver\LanguagesDispatcher\tests\UnitTester
+     * @var \h0rseduck\LanguagesDispatcher\tests\UnitTester
      */
     protected $tester;
 
@@ -28,7 +28,7 @@ abstract class AbstractUnitTest extends Unit
                 'bootstrap' => ['ld'],
                 'components' => [
                     'ld' => [
-                        'class' => 'cetver\LanguagesDispatcher\Component',
+                        'class' => 'h0rseduck\LanguagesDispatcher\Component',
                     ],
                     'request' => [
                         'cookieValidationKey' => 'cookieValidationKey'

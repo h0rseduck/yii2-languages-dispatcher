@@ -1,13 +1,13 @@
 <?php
 
-namespace cetver\LanguagesDispatcher\handlers;
+namespace h0rseduck\LanguagesDispatcher\handlers;
 
 use yii\base\BaseObject;
 
 /**
  * Class AbstractHandler is a simple handler implementation that other handlers can inherit from.
  *
- * @package cetver\LanguagesDispatcher\handlers
+ * @package h0rseduck\LanguagesDispatcher\handlers
  */
 abstract class AbstractHandler extends BaseObject
 {

@@ -1,16 +1,16 @@
 <?php
 
-namespace cetver\LanguagesDispatcher\tests\unit\handlers;
+namespace h0rseduck\LanguagesDispatcher\tests\unit\handlers;
 
-use cetver\LanguagesDispatcher\handlers\HostNameHandler;
-use cetver\LanguagesDispatcher\tests\AbstractUnitTest;
+use h0rseduck\LanguagesDispatcher\handlers\HostNameHandler;
+use h0rseduck\LanguagesDispatcher\tests\AbstractUnitTest;
 use yii\base\InvalidConfigException;
 use yii\web\Request;
 
 /**
  * Class HostHandlerTest
  *
- * @package cetver\LanguagesDispatcher\tests\unit\handlers
+ * @package h0rseduck\LanguagesDispatcher\tests\unit\handlers
  */
 class HostNameHandlerTest extends AbstractUnitTest
 {

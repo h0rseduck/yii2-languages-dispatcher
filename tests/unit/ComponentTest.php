@@ -1,10 +1,10 @@
 <?php
 
-namespace cetver\LanguagesDispatcher\tests;
+namespace h0rseduck\LanguagesDispatcher\tests;
 
-use cetver\LanguagesDispatcher\Component;
-use cetver\LanguagesDispatcher\handlers\AbstractHandler;
-use cetver\LanguagesDispatcher\handlers\CookieHandler;
+use h0rseduck\LanguagesDispatcher\Component;
+use h0rseduck\LanguagesDispatcher\handlers\AbstractHandler;
+use h0rseduck\LanguagesDispatcher\handlers\CookieHandler;
 use Yii;
 use yii\base\InvalidConfigException;
 use yii\web\Application;
@@ -14,7 +14,7 @@ class ComponentTest extends AbstractUnitTest
     public function testBootstrap()
     {
         /**
-         * @var $ld \cetver\LanguagesDispatcher\Component
+         * @var $ld \h0rseduck\LanguagesDispatcher\Component
          */
         $this->tester->expectException(
             new InvalidConfigException(
@@ -76,9 +76,9 @@ class ComponentTest extends AbstractUnitTest
                 'ld' => [
                     'languages' => $this->languages,
                     'handlers' => [
-                        'cetver\LanguagesDispatcher\handlers\QueryParamHandler',
+                        'h0rseduck\LanguagesDispatcher\handlers\QueryParamHandler',
                         [
-                            'class' => 'cetver\LanguagesDispatcher\handlers\SessionHandler',
+                            'class' => 'h0rseduck\LanguagesDispatcher\handlers\SessionHandler',
                         ],
                         new CookieHandler()
                     ]
@@ -118,7 +118,7 @@ class ComponentTest extends AbstractUnitTest
                     'languages' => $this->languages,
                     'handlers' => [
                         [
-                            'class' => 'cetver\LanguagesDispatcher\handlers\DefaultLanguageHandler',
+                            'class' => 'h0rseduck\LanguagesDispatcher\handlers\DefaultLanguageHandler',
                             'language' => 'ru'
                         ],
                     ]
@@ -133,9 +133,9 @@ class ComponentTest extends AbstractUnitTest
                 'ld' => [
                     'languages' => $this->languages,
                     'handlers' => [
-                        'cetver\LanguagesDispatcher\handlers\QueryParamHandler',
+                        'h0rseduck\LanguagesDispatcher\handlers\QueryParamHandler',
                         [
-                            'class' => 'cetver\LanguagesDispatcher\handlers\DefaultLanguageHandler',
+                            'class' => 'h0rseduck\LanguagesDispatcher\handlers\DefaultLanguageHandler',
                             'language' => 'ru'
                         ],
                     ]
@@ -151,9 +151,9 @@ class ComponentTest extends AbstractUnitTest
                 'ld' => [
                     'languages' => $this->languages,
                     'handlers' => [
-                        'cetver\LanguagesDispatcher\handlers\QueryParamHandler',
+                        'h0rseduck\LanguagesDispatcher\handlers\QueryParamHandler',
                         [
-                            'class' => 'cetver\LanguagesDispatcher\handlers\DefaultLanguageHandler',
+                            'class' => 'h0rseduck\LanguagesDispatcher\handlers\DefaultLanguageHandler',
                             'language' => 'ru'
                         ],
                     ]
@@ -168,7 +168,7 @@ class ComponentTest extends AbstractUnitTest
             'components' => [
                 'ld' => [
                     'handlers' => [
-                        'cetver\LanguagesDispatcher\handlers\SessionHandler',
+                        'h0rseduck\LanguagesDispatcher\handlers\SessionHandler',
                     ]
                 ],
             ],
@@ -181,7 +181,7 @@ class ComponentTest extends AbstractUnitTest
                     'languages' => $this->languages,
                     'appendSetLanguageHandler' => false,
                     'handlers' => [
-                        'cetver\LanguagesDispatcher\handlers\SessionHandler',
+                        'h0rseduck\LanguagesDispatcher\handlers\SessionHandler',
                     ],
                 ],
             ],
@@ -195,7 +195,7 @@ class ComponentTest extends AbstractUnitTest
                     'ld' => [
                         'languages' => $this->languages,
                         'handlers' => [
-                            'cetver\LanguagesDispatcher\handlers\AcceptLanguageHeaderHandler',
+                            'h0rseduck\LanguagesDispatcher\handlers\AcceptLanguageHeaderHandler',
                         ],
                     ],
                 ],
