@@ -19,42 +19,37 @@ class UserHandler extends AbstractHandler
      * @var string the User component ID.
      */
     public $user = 'user';
+
     /**
      * @var string an attribute that contains a language.
      */
     public $languageAttribute = 'language_code';
+
     /**
-     * @var null|\yii\web\IdentityInterface|ActiveRecord
+     * @var User
      */
-    protected $identity;
+    protected $component;
 
     /**
      * @inheritdoc
      */
     public function init()
     {
-        $user = Yii::$app->get($this->user, false);
-        if (!$user instanceof User) {
+        $this->component = Yii::$app->get($this->user, false);
+        if (!$this->component instanceof User) {
             throw new InvalidConfigException(sprintf(
                 'The component with the specified ID "%s" must be an instance of "%s"',
                 $this->user,
                 User::className()
             ));
         }
-        $this->identity = $user->getIdentity();
-        if ($this->identity !== null) {
-            if (!$this->identity instanceof ActiveRecord) {
+        $identityClass = $this->component->identityClass;
+        if ($identityClass !== null) {
+            if (!is_subclass_of($identityClass, ActiveRecord::className())) {
                 throw new InvalidConfigException(sprintf(
                     'The "%s::getIdentity()" method must return an instance of "%s"',
-                    $user::className(),
+                    $this->component::className(),
                     ActiveRecord::className()
-                ));
-            }
-            if (!$this->identity->hasProperty($this->languageAttribute)) {
-                throw new InvalidConfigException(sprintf(
-                    'The "%s" property does not exists in the "%s" class',
-                    $this->languageAttribute,
-                    get_class($this->identity)
                 ));
             }
             Yii::$app->on(Component::EVENT_AFTER_SETTING_LANGUAGE, [$this, 'saveAttribute']);
@@ -66,7 +61,12 @@ class UserHandler extends AbstractHandler
      */
     public function getLanguages()
     {
-        return ($this->identity === null) ? [] : [$this->identity->{$this->languageAttribute}];
+        /** @var null|ActiveRecord $identity */
+        $identity = $this->component->getIdentity();
+        if ($identity === null || !$identity->hasProperty($this->languageAttribute)) {
+            return [];
+        }
+        return [$identity->{$this->languageAttribute}];
     }
 
     /**
@@ -75,9 +75,10 @@ class UserHandler extends AbstractHandler
     public function saveAttribute()
     {
         $language = current($this->getLanguages());
-        if ($language !== Yii::$app->language) {
-            $this->identity->{$this->languageAttribute} = Yii::$app->language;
-            $this->identity->save(true, [$this->languageAttribute]);
+        $identity = $this->component->getIdentity();
+        if ($language !== Yii::$app->language && $identity !== null && $identity->hasProperty($this->languageAttribute)) {
+            $identity->{$this->languageAttribute} = Yii::$app->language;
+            $identity->save(true, [$this->languageAttribute]);
         }
     }
 }
